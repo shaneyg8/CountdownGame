@@ -1,4 +1,5 @@
 #lang racket
+;Taken From Class
 (define start(list -1 -1 -1 -1 1 1 1 1))
 
 ;This line creates all permutations and it removes the duplicates 
