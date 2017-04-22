@@ -1,12 +1,6 @@
 #lang racket
-;Taken From Class
-;(define start(list -1 -1 -1 -1 1 1 1 1))
-
 ;A static list must be created of numbers and operators
 (define f null)
-
-;list of operands
-(define op (list '+ '+ '+ '+ '+ '- '- '- '- '- '- '* '* '* '* '*  '/ '/ '/ '/ '/))
 
 ;Reverse Polish Notation In Racket : https://rosettacode.org/wiki/Parsing/RPN_calculator_algorithm#Racket
 ;This function is taken from the link above
