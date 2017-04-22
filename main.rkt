@@ -8,7 +8,7 @@
 ;list of operands
 (define op (list '+ '+ '+ '+ '+ '- '- '- '- '- '- '* '* '* '* '*  '/ '/ '/ '/ '/))
 
-;Reverse Polar Notation In Racket : https://rosettacode.org/wiki/Parsing/RPN_calculator_algorithm#Racket
+;Reverse Polish Notation In Racket : https://rosettacode.org/wiki/Parsing/RPN_calculator_algorithm#Racket
 ;This function is taken from the link above
 (define (calculate-RPN expr)
   (for/fold ([stack '()]) ([token expr])
@@ -27,7 +27,27 @@
                    (reverse (cons x s)))])))
 
 
-;Removing errors to work on what we were given in class
-;This line creates all permutations and it removes the duplicates 
-;(define perms (remove-duplicates (permutations flatten)))
+
+;Validation taken from class
+;Function to check if a valid rpn
+(define (valid-rpn? e[s 0])
+  (if(null? e)
+     (if (= s 1) #t #f)
+     (if(number? (car e) )
+        (valid-rpn? (cdr e) (+ s 1))
+        (if(> s 1)
+           (valid-rpn? (cdr e) (- s 1))
+           #f))))
+
+;Function to make a perm into a rpn expression and calculates the expression if valid rpn
+(define (rpn-selected-numbers) list)
+(define (rpn-selected-operators) list)
+
+(define (make-rpn l)
+  (if(valid-rpn? (append (list 1 1) l (list '*)))
+     (calculate-RPN(append (list 1 1) l (list '*)))
+     #f)
+  )
+
+
 
