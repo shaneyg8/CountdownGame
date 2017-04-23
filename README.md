@@ -1,7 +1,7 @@
 # CountdownGame - Theory of Algorithms 
 ## Racket
 ### Shane Gleeson - G00311793
-### Lecturer - Dr Ian McgLoughlin
+### Lecturer - Dr Ian McLoughlin
 
 ## 1. Introduction
 For this project we are to create a game which takes the functionality of the TV Game Show Countdowns Math challenge 
@@ -65,7 +65,7 @@ The function I use in the project which is taken from [https://rosettacode.org/w
 In Java Uniform Cost Search (UCS) is a best-first variant that uses only the
 g(n) function to compute the best path to a goal. Similarly to RPN the RPN function above computes the function to give the best path to a goal. The g(n) function being `f*(n) = g*(n) + 0`. 
 
-#### 3. Approach
+## 3. Approach
 ##### Idea 1
 I had an idea in place from the start where I would set out a random generated function where it will compute a number for you to reach. Given the list of numbers we were given in class I wanted to include these at the top where you could view what you could use and make a 
 game out of it. Beneath that that random generated function would then produce your target.
@@ -98,4 +98,28 @@ A function needed to be created to Calculate RPN. Once everything is validated i
                    [else (sum (cdr x) n)])]
             [else (sum (cdr x) n)])))
 ```
+## 4. What To Be Added
+Due to time management and running into numerous problems I couldn't get the project fully finished. I have a strong idea of what needs to be done to finish the project listed below.
 
++ A list needs to be created so it can output the number of solutions which would look something like the code below 
+```
+(define (mklist l))
+```
++ Cond will be then used. The cond form chains a series of tests to select a result expression.
+```
+(cond ((<= (length l))
+```
+A value will be set for combinations in that list where duplicates will be removed using the cartesian product
+
+What is Cartesian Product?
+A Cartesian product is a mathematical operation that returns a set (or product set or simply product) from multiple sets.
+
++ Permutations will be added in also at the end
+
+Because I ran out of time I couldn't get this added into the last part of my project and I feel at the end I could have gotten it working.
+
+The final output I wanted to include in this would be when ran in Dr Racket you get your Target Number through the random generator and then to work out all solutions you would enter `(rpn (list * * * *)TARGET NUMBER)` , then all the solutions should output.
+
+## 5. Conclusion
+
+I had set out a plan of what to incorporate into this project but unfortunately ran out of time that being it my own downfall and not managing my time properly. I found Racket to be quiet complex and tricky to get the hang of and understanding all of the expressions and what each of them do but I slowly got the hang of it and I feel if I were to start this project again I indeed keep going the way I was going using Reverse Polish Notation. This project taught me a lot about Racket and its functionality.
