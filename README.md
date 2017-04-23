@@ -59,3 +59,8 @@ The function I use in the project which is taken from [https://rosettacode.org/w
      [(x s) (error "calculate-RPN: Cannot calculate the expression:" 
                    (reverse (cons x s)))])))
 ```
+
+#### 2.2 Evaluation Tree
+##### 2.2.1 Branch and Bound
+In Java Uniform Cost Search (UCS) is a best-first variant that uses only the
+g(n) function to compute the best path to a goal. Similarly to RPN the RPN function above computes the function to give the best path to a goal
