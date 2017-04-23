@@ -60,6 +60,12 @@ rand
                    [else (sum (cdr x) n)])]
             [else (sum (cdr x) n)])))
 
+(define (main-menu)
+  (display "Shane Gleeson - Countdown Number Game \n-------------------------------------------\n")
+  (display "1. When Run your target will be displayed along with the numbers you can use above it\n")
+  )
+(main-menu)
+
 ;What i wanted to include to finish this was using combinations and lists and stacks to produce answers to the number target
 ;that is produced using the random generated list... To run the final part I wanted to use rpn and list and incorporating the target
 ;number given ... for example it would look like (rpn (list * * * *)TARGET NUMBER) where * is numbers from the list of numbers
