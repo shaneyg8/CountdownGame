@@ -1,6 +1,8 @@
 #lang racket
+(define f null)
 ;A static list for numbers and operators
-
+;Here we start off the game giving a random generated number which will be your target
+;From this you will then choose 6 numbers from the list above the target number 
 (define start(list 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 25 50 75 100))
 ;list of operands
 (define op (list '+ '+ '+ '+ '+ '- '- '- '- '- '- '* '* '* '* '*  '/ '/ '/ '/ '/))
@@ -18,7 +20,7 @@ rand
 ;This function is taken from the link above
 (define (calculate-RPN expr)
   (for/fold ([stack '()]) ([token expr])
-    (printf "~a\t -> ~a~N" token stack) 
+    ;(printf "~a\t -> ~a~N" token stack) 
     (match* (token stack)
      [((? number? n) s) (cons n s)]
      [('+ (list x y s ___)) (cons (+ x y) s)]
@@ -36,6 +38,7 @@ rand
 
 ;Validation taken from class
 ;Function to check if a valid rpn
+
 (define (valid-rpn? e[s 0])
   (if(null? e)
      (if (= s 1) #t #f)
@@ -45,15 +48,15 @@ rand
            (valid-rpn? (cdr e) (- s 1))
            #f))))
 
-;Function to make a perm into a rpn expression and calculates the expression if valid rpn
-(define (rpn-selected-numbers) list)
-(define (rpn-selected-operators) list)
+;Calculating rpn function needs to be done
 
-(define (make-rpn l)
-  (if(valid-rpn? (append (list 1 1) l (list '*)))
-     (calculate-RPN(append (list 1 1) l (list '*)))
-     #f)
-  )
-
+(define (sum x n)
+  (if (null? x)
+      0
+      (cond [(valid-rpn? (car x))
+             (cond [(eqv? (car (calculate-RPN (car x))) n);Calculate the RPN 
+                    (writeln (car x))]
+                   [else (sum (cdr x) n)])]
+            [else (sum (cdr x) n)])))
 
 
