@@ -81,3 +81,21 @@ game out of it. Beneath that that random generated function would then produce y
 rand
 ```
 
+##### Idea 2
+Incorporating the RPN functionality and Calculating RPN. As seen above in part 2.1 you can see the RPN function. Why use RPN?
++ Computer useses stack for evaluating the arithmetic expressions
++ Allows the user to focus on the math and not on how to get the calculator to do when they want
+
+##### How I went about Idea 2
+A function needed to be created to Calculate RPN. Once everything is validated it is put through the reverse polish notation calculator function.
+```
+(define (sum x n)
+  (if (null? x)
+      0
+      (cond [(valid-rpn? (car x))
+             (cond [(eqv? (car (calculate-RPN (car x))) n);Calculate the RPN 
+                    (writeln (car x))]
+                   [else (sum (cdr x) n)])]
+            [else (sum (cdr x) n)])))
+```
+
