@@ -60,4 +60,7 @@ rand
                    [else (sum (cdr x) n)])]
             [else (sum (cdr x) n)])))
 
+;What i wanted to include to finish this was using combinations and lists and stacks to produce answers to the number target
+;that is produced using the random generated list... To run the final part I wanted to use rpn and list and incorporating the target
+;number given ... for example it would look like (rpn (list * * * *)TARGET NUMBER) where * is numbers from the list of numbers
 
