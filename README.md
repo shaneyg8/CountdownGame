@@ -125,7 +125,12 @@ The final output I wanted to include in this would be when ran in Dr Racket you 
 I had set out a plan of what to incorporate into this project but unfortunately ran out of time that being it my own downfall and not managing my time properly. I found Racket to be quiet complex and tricky to get the hang of and understanding all of the expressions and what each of them do but I slowly got the hang of it and I feel if I were to start this project again I indeed keep going the way I was going using Reverse Polish Notation. This project taught me a lot about Racket and its functionality.
 
 ## 6. References
-1. [https://rosettacode.org/wiki/Parsing/RPN_calculator_algorithm#Racket](https://rosettacode.org/wiki/Parsing/RPN_calculator_algorithm#Racket)
-2. [https://en.wikipedia.org/wiki/Cartesian_product](https://en.wikipedia.org/wiki/Cartesian_product)
-3. [https://cs.stackexchange.com/questions/4666/what-is-the-significance-of-reverse-polish-notation](https://cs.stackexchange.com/questions/4666/what-is-the-significance-of-reverse-polish-notation)
+1. [Reverse Polish Notation Algo](https://rosettacode.org/wiki/Parsing/RPN_calculator_algorithm#Racket)
+2. [Cartesian Product Wiki](https://en.wikipedia.org/wiki/Cartesian_product)
+3. [Stack Exchange answer to reverse polish notation](https://cs.stackexchange.com/questions/4666/what-is-the-significance-of-reverse-polish-notation)
 4. References used from Artificial Intelligent class with John Healy about Branch and Bound 
+5. [How to install Racket](https://www.student.cs.uwaterloo.ca/~cs115/drracketathome.html)
+6. [Pairs and Lists](https://docs.racket-lang.org/reference/pairs.html)
+7. [Reverse Polish Notation](https://en.wikipedia.org/wiki/Reverse_Polish_notation)
+8. Reverse Polish Notation taken from Moodle
+9. [Permutations](https://rosettacode.org/wiki/Permutations)
