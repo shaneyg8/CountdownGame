@@ -1,6 +1,18 @@
 #lang racket
-;A static list must be created of numbers and operators
-(define f null)
+;A static list for numbers and operators
+
+(define start(list 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 25 50 75 100))
+;list of operands
+(define op (list '+ '+ '+ '+ '+ '- '- '- '- '- '- '* '* '* '* '*  '/ '/ '/ '/ '/))
+start
+
+;Generating the random number
+(define rand (random 101 1000))
+rand
+
+;6 random numbers to be placed in an empty list
+(define nums(list))
+
 
 ;Reverse Polish Notation In Racket : https://rosettacode.org/wiki/Parsing/RPN_calculator_algorithm#Racket
 ;This function is taken from the link above
