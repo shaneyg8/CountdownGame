@@ -1,7 +1,7 @@
 # CountdownGame - Theory of Algorithms 
-## Racket
-### Shane Gleeson - G00311793
-### Lecturer - Dr Ian McLoughlin
+## *Racket* 
+### *Shane Gleeson - G00311793*
+### *Lecturer - Dr Ian McLoughlin*
 
 ## 1. Introduction
 For this project we are to create a game which takes the functionality of the TV Game Show Countdowns Math challenge 
