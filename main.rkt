@@ -38,7 +38,8 @@ rand
 
 ;Validation taken from class
 ;Function to check if a valid rpn
-
+;First value in procedure will be taken in with the car expression
+;Further values will be taken in with the cdr expression
 (define (valid-rpn? e[s 0])
   (if(null? e)
      (if (= s 1) #t #f)
