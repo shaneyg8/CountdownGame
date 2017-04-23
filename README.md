@@ -63,4 +63,21 @@ The function I use in the project which is taken from [https://rosettacode.org/w
 #### 2.2 Evaluation Tree
 ##### 2.2.1 Branch and Bound
 In Java Uniform Cost Search (UCS) is a best-first variant that uses only the
-g(n) function to compute the best path to a goal. Similarly to RPN the RPN function above computes the function to give the best path to a goal
+g(n) function to compute the best path to a goal. Similarly to RPN the RPN function above computes the function to give the best path to a goal. The g(n) function being `f*(n) = g*(n) + 0`. 
+
+#### 3. Approach
+##### Idea 1
+I had an idea in place from the start where I would set out a random generated function where it will compute a number for you to reach. Given the list of numbers we were given in class I wanted to include these at the top where you could view what you could use and make a 
+game out of it. Beneath that that random generated function would then produce your target.
+
+##### How I went about Idea 1
+- Below sets out the heading at the top and produces the numbers that need to be used in the game
+`(define start(list 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 25 50 75 100))`
+
+- To produce the random number, in the game countdown they only give you a target number that is between 101 - 1000 so a random generated number needs to be between that. The expression in Racket for random is `rand`so I needed to create a function to do so which is seen below
+
+```
+(define rand (random 101 1000))
+rand
+```
+
